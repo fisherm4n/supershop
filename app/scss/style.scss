@@ -3,6 +3,110 @@
 @import 'reset';
 @import 'global';
 
- 
+ .header{
+   display:flex;
+   justify-content: space-between;
+   padding: 53px 75px;
+   align-items: center;
+ }
+ .logo{
+   height:46px ;
+  &__text{
+   color: #436372;
+   font-size: 36px;
+   line-height: 56px;
+   text-decoration: none;
+  }
+  &__text::before {
+    content: url('../images/logo.png');
+    margin-right: 10px;
+  }
+ }
+ .menu{
+  
+  &__list {
+    display: flex;
 
-@import 'media';
+ }
+  &__item+&__item {
+   margin-left: 33px;
+  }
+  &__item-link{
+    color: $accent;
+  }
+}
+ .navi{
+   display: flex;
+  &__item{
+   display: flex;
+  
+  }
+  &__item+&__item {
+   margin-left: 23px;
+  }
+  &__item-search{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: #edf1f4;
+    border-radius: 50%;
+  }
+  &__item-search::after{
+    content: url('../images/search.svg');
+    position: absolute;
+    top: 25%;
+    right: 35%;
+  }
+  &__item-like::after{
+    content: url('../images/like.svg');
+  }
+  &__item-like, &__item-basket{
+    position: relative;
+    color: #243f4d;
+  }
+  &__item-basket {
+    // КАК ТУТ ЛУЧШЕ БЫЛО СДЕЛАТЬ ЭТУ ВЕРТИКАЛЬНУЮ ПОЛОСУ?
+    border-left: 1px solid #fde7d3;
+        padding-left: 27px;
+     
+  }
+  &__item-num{
+    position: absolute;
+    top: -4px;
+    right: -10px;
+    border-radius: 50%;
+    background-color: #fff;
+    width: 17px;
+    line-height: 17px;
+    text-align: center;
+    z-index: 2;
+    @extend %DMSans-400;
+    font-size: 10px;
+  }
+  &__item-basket::after{
+    position: relative;
+    content: url('../images/basket.svg');
+  }
+  &__item--mid{ 
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;  
+    max-width: 100%;
+    width:160px;
+    border-radius: 50px;
+    background-color:#fcd7b6; 
+  }
+  &__item-btn{
+    position: relative;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #a3bbc8;
+  }
+  &__item-btn::after {
+  content: url('../images/button.svg');
+  bottom: 13%;
+  position: absolute;
+  right: 31%;
+  }
+}
