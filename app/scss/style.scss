@@ -16,6 +16,7 @@
    font-size: 36px;
    line-height: 56px;
    text-decoration: none;
+   @extend %Rubik-500;
   }
   &__text::before {
     content: url('../images/logo.png');
@@ -33,6 +34,10 @@
   }
   &__item-link{
     color: $accent;
+    transition: color 0.3s;
+    &:hover{
+      color: $hover;
+    }
   }
 }
  .navi{
@@ -94,7 +99,8 @@
     max-width: 100%;
     width:160px;
     border-radius: 50px;
-    background-color:#fcd7b6; 
+    background-color:#fcd7b6;
+    padding-top: 7px;
   }
   &__item-btn{
     position: relative;
@@ -105,8 +111,91 @@
   }
   &__item-btn::after {
   content: url('../images/button.svg');
-  bottom: 13%;
+  bottom: 9%;
   position: absolute;
   right: 31%;
+  }
+}
+
+.footer-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color:$accent2;
+  padding-bottom: 77px;
+  &__contacts{
+    max-width: 203px;
+  }
+  &__span{
+    text-transform: uppercase;
+  }
+  &__adress{
+    margin-top: 28px;
+    line-height: 24px;
+    margin-bottom: 15px;
+  }
+  &__item-link{
+    color: $accent2;
+    transition: color 0.3s;
+    font-size: 15px;
+    &:hover{
+      color: #fcd7b6;
+    }
+  }
+  &__title{
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: $title2;
+  }
+  &__text{
+    max-width: 220px;
+    margin-bottom: 37px;
+  }
+  &__form{
+    @extend %DMSans-400;
+  }
+  &__input {
+    background-color: #fef7f0;
+    max-width: 267px;
+    @extend %DMSans-400;
+    border: none;
+    padding: 10px 20px;
+  }
+  &__input::placeholder {
+      color: #234969;
+      font-size: 14px;
+      @extend %DMSans-400;
+    }
+  
+  &__btn{
+    border: none;
+    max-width: 106px;
+    width: 100%;
+    padding: 10px 26px 10px 16px;
+    color: #fff;
+    background-color: #a3bbc8;
+  }
+  
+}
+.footer,
+.footer a {
+  // Почему я цвет на ссылки могу только так поставить причем именно после прописанных свойств сверху
+
+  color: $accent2;
+}
+.footer-bottom{
+  // как эти полоски в навигации сделать меньше, как на макете
+  display: flex;
+  justify-content: space-between;
+  padding: 38px 0px;
+  border-top: 1px solid $accent2;
+  &__menu-list{
+    display: flex;
+  }
+   
+  &__menu-item+&__menu-item{
+    margin-left: 12px;
+    padding-left: 12px;
+    border-left: 1px solid #dae4e9;
   }
 }
