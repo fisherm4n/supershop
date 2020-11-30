@@ -1,12 +1,19 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
- .header{
+//  .header{
+//    display:flex;
+//    justify-content: space-between;
+//    padding: 53px 75px;
+//    align-items: center;
+//  }
+ .header__inner{
    display:flex;
    justify-content: space-between;
-   padding: 53px 75px;
+   padding: 53px 0px;
    align-items: center;
  }
  .logo{
@@ -97,10 +104,10 @@
     align-items: center;
     justify-content: space-evenly;  
     max-width: 100%;
-    width:160px;
+    width: 175px;
     border-radius: 50px;
-    background-color:#fcd7b6;
-    padding-top: 7px;
+    background-color: #fcd7b6;
+    padding-top: 12px
   }
   &__item-btn{
     position: relative;
@@ -143,7 +150,7 @@
     }
   }
   &__title{
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     text-transform: uppercase;
     color: $title2;
   }
@@ -197,5 +204,77 @@
     margin-left: 12px;
     padding-left: 12px;
     border-left: 1px solid #dae4e9;
+  }
+}
+.top-slider__wrapper{
+  padding:198px 75px 45px;
+  background-color: #fcd7b6;
+  background-image: url('../images/slider-bg.png');
+  background-repeat: no-repeat;
+  background-position: 84% 50%;
+  margin: 0px auto;
+  max-width: 1770px;
+}
+.top-slider{
+  
+  &__item{
+    display: flex !important;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 209px;
+  }
+  &__content{
+    max-width: 460px;
+  }
+  &__title{
+    color: $title;
+    font-size: 72px;
+    line-height: 70px;
+  }
+  &__text{
+        max-width: 372px;
+        margin: 35px 0px 50px;
+        line-height: 30px;
+        font-size: 18px;
+  }
+  &__link{
+    position: relative;
+    font-size: 15px;
+    line-height: 12px;
+    color: #fff;
+    background-color: #a3bbc8;
+    max-width: 200px;
+    padding:24px 28px;
+    padding-right: 100px;
+  &::after{
+    content: url('../images/arrow.svg');
+    position: absolute;
+        top: 41%;
+        right: 11%; //а как здесь ховер применить, чтоб стрелка смещалась при наведении или только через html получится(если туда картинку залить)
+  }
+  }
+}
+.slick-dots{
+  display: flex;
+  justify-content: center;
+  li{
+    margin-left: 12px;
+    
+    button{
+      font-size: 11px;
+      line-height: 9px;
+      border:none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      color: $title;
+      background-color: #fde3cc;
+      transition:background-color 1s;
+    }
+    &.slick-active{
+      button{
+      background-color: #fff;
+      }
+    }
   }
 }
