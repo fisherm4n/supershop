@@ -1,8 +1,8 @@
-@import 'vars';
-@import 'fonts';
-@import 'reset';
-@import 'libs';
-@import 'global';
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "libs";
+@import "global";
 
 //  .header{
 //    display:flex;
@@ -10,79 +10,92 @@
 //    padding: 53px 75px;
 //    align-items: center;
 //  }
- .header__inner{
-   display:flex;
-   justify-content: space-between;
-   padding: 53px 0px;
-   align-items: center;
- }
- .logo{
-   height:46px ;
-  &__text{
-   color: #436372;
-   font-size: 36px;
-   line-height: 56px;
-   text-decoration: none;
-   @extend %Rubik-500;
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 53px 0px;
+  align-items: center;
+}
+.logo {
+  height: 46px;
+  &__text {
+    color: #436372;
+    font-size: 36px;
+    line-height: 56px;
+    text-decoration: none;
+    @extend %Rubik-500;
   }
   &__text::before {
-    content: url('../images/logo.png');
+    content: url("../images/logo.png");
     margin-right: 10px;
   }
- }
- .menu{
-  
+}
+.menu {
   &__list {
     display: flex;
-
- }
-  &__item+&__item {
-   margin-left: 33px;
   }
-  &__item-link{
+  &__item + &__item {
+    margin-left: 33px;
+  }
+  &__item-link {
     color: $accent;
     transition: color 0.3s;
-    &:hover{
+    &:hover {
       color: $hover;
     }
   }
 }
- .navi{
-   display: flex;
-  &__item{
-   display: flex;
-  
+.navi {
+  display: flex;
+  justify-content: space-between;
+  &__item {
+    display: flex;
   }
-  &__item+&__item {
-   margin-left: 23px;
+  &__item + &__item {
+    margin-left: 23px;
   }
-  &__item-search{
+  &__btn {
     position: relative;
     width: 50px;
     height: 50px;
+    font-size: 0px;
+    padding: 0px;
+    border: none;
     background-color: #edf1f4;
     border-radius: 50%;
+    cursor: pointer;
   }
-  &__item-search::after{
-    content: url('../images/search.svg');
+  .navi__btn--left{
+    background-image: url("../images/search.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .navi__btn--right{
+    background-image: url("../images/button.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #a3bbc8;
+  }
+  &__item-search::after {
+    content: url("../images/search.svg");
     position: absolute;
     top: 25%;
     right: 35%;
   }
-  &__item-like::after{
-    content: url('../images/like.svg');
+  &__item-like::after {
+    content: url("../images/like.svg");
   }
-  &__item-like, &__item-basket{
+  &__item-like,
+  &__item-basket {
     position: relative;
     color: #243f4d;
   }
   &__item-basket {
     // КАК ТУТ ЛУЧШЕ БЫЛО СДЕЛАТЬ ЭТУ ВЕРТИКАЛЬНУЮ ПОЛОСУ?
     border-left: 1px solid #fde7d3;
-        padding-left: 27px;
-     
+    padding-left: 27px;
   }
-  &__item-num{
+  &__item-num {
     position: absolute;
     top: -4px;
     right: -10px;
@@ -95,21 +108,21 @@
     @extend %DMSans-400;
     font-size: 10px;
   }
-  &__item-basket::after{
+  &__item-basket::after {
     position: relative;
-    content: url('../images/basket.svg');
+    content: url("../images/basket.svg");
   }
-  &__item--mid{ 
+  &__item--mid {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;  
+    justify-content: space-evenly;
     max-width: 100%;
     width: 175px;
     border-radius: 50px;
     background-color: #fcd7b6;
-    padding-top: 12px
+    padding-top: 12px;
   }
-  &__item-btn{
+  &__item-btn {
     position: relative;
     border-radius: 50%;
     width: 50px;
@@ -117,48 +130,48 @@
     background-color: #a3bbc8;
   }
   &__item-btn::after {
-  content: url('../images/button.svg');
-  bottom: 9%;
-  position: absolute;
-  right: 31%;
+    content: url("../images/button.svg");
+    bottom: 9%;
+    position: absolute;
+    right: 31%;
   }
 }
 
-.footer-top{
+.footer-top {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  color:$accent2;
+  color: $accent2;
   padding-bottom: 77px;
-  &__contacts{
+  &__contacts {
     max-width: 203px;
   }
-  &__span{
+  &__span {
     text-transform: uppercase;
   }
-  &__adress{
+  &__adress {
     margin-top: 28px;
     line-height: 24px;
     margin-bottom: 15px;
   }
-  &__item-link{
+  &__item-link {
     color: $accent2;
     transition: color 0.3s;
     font-size: 15px;
-    &:hover{
+    &:hover {
       color: #fcd7b6;
     }
   }
-  &__title{
+  &__title {
     margin-bottom: 10px;
     text-transform: uppercase;
     color: $title2;
   }
-  &__text{
+  &__text {
     max-width: 220px;
     margin-bottom: 37px;
   }
-  &__form{
+  &__form {
     @extend %DMSans-400;
   }
   &__input {
@@ -169,12 +182,12 @@
     padding: 10px 20px;
   }
   &__input::placeholder {
-      color: #234969;
-      font-size: 14px;
-      @extend %DMSans-400;
-    }
-  
-  &__btn{
+    color: #234969;
+    font-size: 14px;
+    @extend %DMSans-400;
+  }
+
+  &__btn {
     border: none;
     max-width: 106px;
     width: 100%;
@@ -182,7 +195,6 @@
     color: #fff;
     background-color: #a3bbc8;
   }
-  
 }
 .footer,
 .footer a {
@@ -190,90 +202,89 @@
 
   color: $accent2;
 }
-.footer-bottom{
+.footer-bottom {
   // как эти полоски в навигации сделать меньше, как на макете
   display: flex;
   justify-content: space-between;
   padding: 38px 0px;
   border-top: 1px solid $accent2;
-  &__menu-list{
+  &__menu-list {
     display: flex;
   }
-   
-  &__menu-item+&__menu-item{
+
+  &__menu-item + &__menu-item {
     margin-left: 12px;
     padding-left: 12px;
     border-left: 1px solid #dae4e9;
   }
 }
-.top-slider__wrapper{
-  padding:198px 75px 45px;
+.top-slider__wrapper {
+  padding: 198px 75px 45px;
   background-color: #fcd7b6;
-  background-image: url('../images/slider-bg.png');
+  background-image: url("../images/slider-bg.png");
   background-repeat: no-repeat;
   background-position: 84% 50%;
   margin: 0px auto;
   max-width: 1770px;
 }
-.top-slider{
-  
-  &__item{
+.top-slider {
+  &__item {
     display: flex !important;
     align-items: flex-end;
     justify-content: space-between;
     margin-bottom: 209px;
   }
-  &__content{
+  &__content {
     max-width: 460px;
   }
-  &__title{
+  &__title {
     color: $title;
     font-size: 72px;
     line-height: 70px;
   }
-  &__text{
-        max-width: 372px;
-        margin: 35px 0px 50px;
-        line-height: 30px;
-        font-size: 18px;
+  &__text {
+    max-width: 372px;
+    margin: 35px 0px 50px;
+    line-height: 30px;
+    font-size: 18px;
   }
-  &__link{
+  &__link {
     position: relative;
     font-size: 15px;
     line-height: 12px;
     color: #fff;
     background-color: #a3bbc8;
     max-width: 200px;
-    padding:24px 28px;
+    padding: 24px 28px;
     padding-right: 100px;
-  &::after{
-    content: url('../images/arrow.svg');
-    position: absolute;
-        top: 41%;
-        right: 11%; //а как здесь ховер применить, чтоб стрелка смещалась при наведении или только через html получится(если туда картинку залить)
-  }
+    &::after {
+      content: url("../images/arrow.svg");
+      position: absolute;
+      top: 41%;
+      right: 11%; //а как здесь ховер применить, чтоб стрелка смещалась при наведении или только через html получится(если туда картинку залить)
+    }
   }
 }
-.slick-dots{
+.slick-dots {
   display: flex;
   justify-content: center;
-  li{
+  li {
     margin-left: 12px;
-    
-    button{
+
+    button {
       font-size: 11px;
       line-height: 9px;
-      border:none;
+      border: none;
       border-radius: 50%;
       width: 30px;
       height: 30px;
       color: $title;
       background-color: #fde3cc;
-      transition:background-color 1s;
+      transition: background-color 1s;
     }
-    &.slick-active{
-      button{
-      background-color: #fff;
+    &.slick-active {
+      button {
+        background-color: #fff;
       }
     }
   }
