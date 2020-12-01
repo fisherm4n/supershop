@@ -3,10 +3,11 @@ html,body{
 }
 body{
   font-size: 14px;
-  line-height: 32px;
+  line-height: 2.1;
   @extend %Rubik-400;
   display: flex;
   flex-direction: column;
+  color: $accent2;
 }
 .main{
   flex-grow: 1;

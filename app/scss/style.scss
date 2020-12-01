@@ -16,8 +16,10 @@
   padding: 53px 0px;
   align-items: center;
 }
+
 .logo {
   height: 46px;
+
   &__text {
     color: #436372;
     font-size: 36px;
@@ -25,34 +27,40 @@
     text-decoration: none;
     @extend %Rubik-500;
   }
+
   &__text::before {
     content: url("../images/logo.png");
     margin-right: 10px;
   }
 }
+
 .menu {
   &__list {
     display: flex;
   }
-  &__item + &__item {
+
+  &__item+&__item {
     margin-left: 33px;
   }
-  &__item-link {
+
+  &__link {
     color: $accent;
     transition: color 0.3s;
+
     &:hover {
       color: $hover;
     }
   }
 }
+
 .navi {
   display: flex;
   justify-content: space-between;
+      max-width: 317px;
+      width: 100%;
+
   &__item {
     display: flex;
-  }
-  &__item + &__item {
-    margin-left: 23px;
   }
   &__btn {
     position: relative;
@@ -64,37 +72,47 @@
     background-color: #edf1f4;
     border-radius: 50%;
     cursor: pointer;
+    &--left {
+      background-image: url("../images/search.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &--right {
+      background-image: url("../images/button.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #a3bbc8;
+    }
   }
-  .navi__btn--left{
-    background-image: url("../images/search.svg");
+
+  
+  &__item-inner::before {
+    content:"";
+    background-image: url('../images/like.svg');
+    background-position: 16px -3px;
     background-repeat: no-repeat;
-    background-position: center;
+    height: 20px;
+    width: 33px;
   }
-  .navi__btn--right{
-    background-image: url("../images/button.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #a3bbc8;
+
+  &__item-inner::after {
+    content: "";
+    background-image: url("../images/like.svg");
+    background-position: left center;
   }
-  &__item-search::after {
-    content: url("../images/search.svg");
-    position: absolute;
-    top: 25%;
-    right: 35%;
-  }
-  &__item-like::after {
-    content: url("../images/like.svg");
-  }
+
   &__item-like,
   &__item-basket {
     position: relative;
     color: #243f4d;
   }
+
   &__item-basket {
     // КАК ТУТ ЛУЧШЕ БЫЛО СДЕЛАТЬ ЭТУ ВЕРТИКАЛЬНУЮ ПОЛОСУ?
     border-left: 1px solid #fde7d3;
     padding-left: 27px;
   }
+
   &__item-num {
     position: absolute;
     top: -4px;
@@ -108,20 +126,19 @@
     @extend %DMSans-400;
     font-size: 10px;
   }
-  &__item-basket::after {
-    position: relative;
-    content: url("../images/basket.svg");
-  }
+
+
   &__item--mid {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    max-width: 100%;
-    width: 175px;
+    max-width: 175px;
+    width: 100%;
     border-radius: 50px;
     background-color: #fcd7b6;
     padding-top: 12px;
   }
+
   &__item-btn {
     position: relative;
     border-radius: 50%;
@@ -129,6 +146,7 @@
     height: 50px;
     background-color: #a3bbc8;
   }
+
   &__item-btn::after {
     content: url("../images/button.svg");
     bottom: 9%;
@@ -140,50 +158,74 @@
 .footer-top {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: stretch;
   color: $accent2;
-  padding-bottom: 77px;
+  padding-bottom: 66px;
+
   &__contacts {
-    max-width: 203px;
+    max-width: 197px;
   }
+
   &__span {
     text-transform: uppercase;
   }
+
   &__adress {
-    margin-top: 28px;
+    margin-top: 23px;
     line-height: 24px;
-    margin-bottom: 15px;
+    margin-bottom: 7px;
   }
+
   &__item-link {
     color: $accent2;
     transition: color 0.3s;
     font-size: 15px;
+    font-weight: 400;
     &:hover {
       color: #fcd7b6;
     }
   }
+
+  &__column {
+    //дизайнер криворукий? поэтому пришлось костыльно падинги юзать?
+    padding-right: 88px;
+  }
+
+  &__column--fixed {
+    max-width: 26%;
+    padding-right: 0px;
+  }
+
   &__title {
+    font-size: 16px;
     margin-bottom: 10px;
     text-transform: uppercase;
     color: $title2;
+    padding-top: 11px;
+    font-weight: 700;
   }
+
   &__text {
     max-width: 220px;
-    margin-bottom: 37px;
+    margin-bottom: 30px;
   }
+
   &__form {
     @extend %DMSans-400;
   }
+
   &__input {
     background-color: #fef7f0;
-    max-width: 267px;
     @extend %DMSans-400;
+    max-width: 159px;
     border: none;
-    padding: 10px 20px;
+    padding: 5px 15px;
+    outline: transparent;
   }
+
   &__input::placeholder {
     color: #234969;
-    font-size: 14px;
+    font-size: 12px;
     @extend %DMSans-400;
   }
 
@@ -191,33 +233,32 @@
     border: none;
     max-width: 106px;
     width: 100%;
-    padding: 10px 26px 10px 16px;
+    padding: 6px 26px 6px 20px;
     color: #fff;
     background-color: #a3bbc8;
+    outline: transparent;
   }
 }
-.footer,
-.footer a {
-  // Почему я цвет на ссылки могу только так поставить причем именно после прописанных свойств сверху
 
-  color: $accent2;
-}
+
 .footer-bottom {
   // как эти полоски в навигации сделать меньше, как на макете
   display: flex;
   justify-content: space-between;
-  padding: 38px 0px;
+  padding: 31px 0px;
   border-top: 1px solid $accent2;
+
   &__menu-list {
     display: flex;
   }
 
-  &__menu-item + &__menu-item {
+  &__menu-item+&__menu-item {
     margin-left: 12px;
     padding-left: 12px;
     border-left: 1px solid #dae4e9;
   }
 }
+
 .top-slider__wrapper {
   padding: 198px 75px 45px;
   background-color: #fcd7b6;
@@ -227,6 +268,7 @@
   margin: 0px auto;
   max-width: 1770px;
 }
+
 .top-slider {
   &__item {
     display: flex !important;
@@ -234,20 +276,24 @@
     justify-content: space-between;
     margin-bottom: 209px;
   }
+
   &__content {
     max-width: 460px;
   }
+
   &__title {
     color: $title;
     font-size: 72px;
     line-height: 70px;
   }
+
   &__text {
     max-width: 372px;
     margin: 35px 0px 50px;
     line-height: 30px;
     font-size: 18px;
   }
+
   &__link {
     position: relative;
     font-size: 15px;
@@ -257,6 +303,7 @@
     max-width: 200px;
     padding: 24px 28px;
     padding-right: 100px;
+
     &::after {
       content: url("../images/arrow.svg");
       position: absolute;
@@ -265,9 +312,11 @@
     }
   }
 }
+
 .slick-dots {
   display: flex;
   justify-content: center;
+
   li {
     margin-left: 12px;
 
@@ -282,6 +331,7 @@
       background-color: #fde3cc;
       transition: background-color 1s;
     }
+
     &.slick-active {
       button {
         background-color: #fff;
