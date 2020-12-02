@@ -54,13 +54,12 @@
             Search button
           </button>
 
-          <div class="navi__item navi__item--mid">
-            <a href="" class="navi__item-inner">
-
-              <span class="navi__item-num">0</span>
+          <div class="navi__links ">
+            <a href="" class="navi__link" style="background-image: url(../images/like.svg);">
+              <span class="navi__link-num">0</span>
             </a>
-            <a href="" class="navi__item-inner">
-              <span class="navi__item-num">0</span>
+            <a href="" class="navi__link" style="background-image: url(../images/basket.svg);">
+              <span class="navi__link-num">0</span>
             </a>
           </div>
           <button href="#" class="navi__btn navi__btn--right">
@@ -115,22 +114,45 @@
         </div>
       </div>
     </section>
+    <div class="benefits">
+      <div class="wrapper">
+        <div class="benefits__list">
+          <div class="benefits__item benefits__item--left">
+            <h4 class="benefits__title" >Support 24/7.</h4>
+            <p class="benfits__text">Contact us 24 hours a day,<br>7 days a week.</p>
+          </div>
+          <div class="benefits__item benefits__item--mid">
+            <h4 class="benefits__title">Delivery.</h4>
+            <p class="benfits__text">Free shipping on all US order.</p>
+          </div>
+          <div class="benefits__item benefits__item--right">
+            <h4 class="benefits__title">100% Payment secure.</h4>
+            <p class="benfits__text">We ensure secure payment<br>
+              with PEV.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </main>
 
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
         <address class="footer-top__contacts">
-          <div><a href="#" class="logo"><img src="images/logo.png" alt="Логотип" class="logo__img"></a></div>
-          <p class="footer-top__adress">ADDRESS: 4772 Wines Lane
-            Houston, TX 77032</p>
 
-          
-          <a href="tel:+8323475843" class="footer-top__tel"><span
-              class="footer-top__span">Telephone:</span>+832-347-5843</a>
-          
-          <a href="mailto:contact@Glee.com" class="footer-top__email"><span
-              class="footer-top__span">Email:</span>contact@Glee.com</a>
+          <a href="#" class="logo"><img src="images/logo.png" alt="Логотип" class="logo__img"></a>
+          <div class="footer-top__inner">
+            <p class="footer-top__text">ADDRESS: 4772 Wines Lane
+              Houston, TX 77032</p>
+
+
+            <a href="tel:+8323475843" class="footer-top__tel"><span
+                class="footer-top__text">Telephone:</span>+832-347-5843</a>
+
+            <a href="mailto:contact@Glee.com" class="footer-top__email"><span
+                class="footer-top__text">Email:</span>contact@Glee.com</a>
+          </div>
         </address>
         <div class="footer-top__column">
           <p class="footer-top__title">Services</p>
@@ -173,7 +195,7 @@
         </div>
         <div class="footer-top__column footer-top__column--fixed">
           <p class="footer-top__title">Newsletter</p>
-          <p class="footer-top__text">Subscribe by our newsletter and get
+          <p class="footer-top__subtitle">Subscribe by our newsletter and get
             update protidin.</p>
           <form action="#" class="footer-top__form">
             <input type="email" class="footer-top__input" placeholder="Email address" required>
