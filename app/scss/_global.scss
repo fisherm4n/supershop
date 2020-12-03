@@ -2,7 +2,7 @@ html,body{
   height: 100vh;
 }
 body{
-  font-size: 14px;
+  font-size: 16px;
   line-height: 2.1;
   @extend %Rubik-400;
   display: flex;
@@ -24,4 +24,11 @@ margin: 0 auto;
 }
 .wrapper{
   max-width: 1800px;
+}
+.title{
+  margin: 0 auto;
+  @extend %DMSans-700;
+  text-align: center;
+  font-size: 36px;
+  color: $default;
 }
