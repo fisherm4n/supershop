@@ -6,12 +6,5 @@ $(function (){
     fade:true
   });
   
-  var mixer = mixitup(products__items, {
-    selectors: {
-        target: '.products__item'
-    },
-    animation: {
-        duration: 300
-    }
-});
+   var mixer = mixitup('.products__items');
 });
