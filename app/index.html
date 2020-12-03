@@ -118,15 +118,15 @@
       <div class="wrapper">
         <div class="benefits__list">
           <div class="benefits__item benefits__item--left">
-            <h4 class="benefits__title" >Support 24/7.</h4>
+            <p class="benefits__title" >Support 24/7.</p>
             <p class="benfits__text">Contact us 24 hours a day,<br>7 days a week.</p>
           </div>
           <div class="benefits__item benefits__item--mid">
-            <h4 class="benefits__title">Delivery.</h4>
+            <p class="benefits__title">Delivery.</p>
             <p class="benfits__text">Free shipping on all US order.</p>
           </div>
           <div class="benefits__item benefits__item--right">
-            <h4 class="benefits__title">100% Payment secure.</h4>
+            <p class="benefits__title">100% Payment secure.</p>
             <p class="benfits__text">We ensure secure payment<br>
               with PEV.</p>
           </div>
@@ -136,53 +136,43 @@
   <section class="products">
     <div class="container">
       <h2 class="title">Products of the week</h2>
-      <ul class="products__navi">
-        <li class="products__navi-item">
-          <a href="#tab_01" class="products__navi-link">All </a>
-        </li>
-        <li class="products__navi-item">
-          <a href="#tab_02" class="products__navi-link">Furnitures</a>
-        </li>
-        <li class="products__navi-item">
-          <a href="#tab_03" class="products__navi-link">Chairs</a>
-        </li>
-        <li class="products__navi-item">
-          <a href="#tab_04" class="products__navi-link">Lighting</a>
-        </li>
-        <li class="products__navi-item">
-          <a href="#tab_05" class="products__navi-link">Decor</a>
-        </li>
-      </ul>
+      <div class="products__navi">
+        <button class="products__btns" data-filter="all">All</button>
+        <button class="products__btns" data-filter=".category-a">Furnitures</button>
+        <button class="products__btns" data-filter=".category-b">Chairs</button>
+        <button class="products__btns" data-filter=".category-c">Lighting</button>
+        <button class="products__btns" data-filter=".category-d">Decor</button>
+      </div>
       <div class="products__items">
-        <div id="tab_01" class="products__item" style="background-image: url('images/products-top/first.png');">
+        <div class="products__item mix category-a" style="background-image: url('images/products-top/first.png');">
           <h5 class="products__item-title">Wooden radio</h5>
           <p class="products__item-subtitle">$29.00</p>
         </div>
-        <div id="tab_02" class="products__item" style="background-image: url('images/products-top/second.png');">
+        <div class="products__item mix category-a" style="background-image: url('images/products-top/second.png');">
           <h5 class="products__item-title">Wooden chair</h5>
           <p class="products__item-subtitle">$29.00</p>
         </div>
-        <div id="tab_03" class="products__item" style="background-image: url('images/products-top/third.png');">
+        <div class="products__item mix category-d" style="background-image: url('images/products-top/third.png');">
           <h5 class="products__item-title">White chair</h5>
           <p class="products__item-subtitle">$29.00</p>
         </div>
-        <div id="tab_04" class="products__item" style="background-image: url('images/products-top/fourth.png');">
+        <div class="products__item mix category-b" style="background-image: url('images/products-top/fourth.png');">
           <h5 class="products__item-title">Retro table</h5>
           <p class="products__item-subtitle">$29.00</p>
         </div>
-        <div class="products__item" style="background-image: url('images/products-top/fifth.png');">
+        <div class="products__item mix category-b" style="background-image: url('images/products-top/fifth.png');">
           <h5 class="products__item-title">Wooden radio</h5>
           <p class="products__item-subtitle">$29.00</p>
         </div>
-        <div class="products__item" style="background-image: url('images/products-top/sixth.png');">
+        <div class="products__item mix category-c" style="background-image: url('images/products-top/sixth.png');">
           <h5 class="products__item-title">Wooden chair</h5>
           <p class="products__item-subtitle">$29.00</p>
         </div>
-        <div class="products__item" style="background-image: url('images/products-top/seventh.png');">
+        <div class="products__item mix category-c" style="background-image: url('images/products-top/seventh.png');">
           <h5 class="products__item-title">White chair</h5>
           <p class="products__item-subtitle">$29.00</p>
         </div>
-        <div class="products__item" style="background-image: url('images/products-top/eighth.png');">
+        <div class="products__item mix category-d" style="background-image: url('images/products-top/eighth.png');">
           <h5 class="products__item-title">Retro table</h5>
           <p class="products__item-subtitle">$29.00</p>
         </div>
@@ -263,7 +253,7 @@
       <div class="footer-bottom">
         <p class="footer-bottom__copy">©2020 CopyRight Example. All rights reserved. </p>
         <nav class="footer-bottom__menu">
-          <!--можно ли тег nav повторять на странице 2 раза? -->
+        
           <ul class="footer-bottom__menu-list">
             <li class="footer-bottom__menu-item">
               <a class="footer-bottom__menu-link" href="#">
