@@ -258,13 +258,16 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
   padding-bottom: 41px;
   overflow: hidden;
   box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
   &__img-box{
     object-fit: cover;
+    &--fixed{
+      margin-top: 45px;
+    }
   }
   &__links{
     display: flex;
@@ -320,6 +323,7 @@
   }
 
   &__subtitle {
+    display: inherit;
     color: #a3bbc8;
     text-align:center;
   }
