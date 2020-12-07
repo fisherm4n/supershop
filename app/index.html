@@ -155,7 +155,7 @@
         <div class="products-cards">
           <article class="products-card mix category-a">
             <!-- контентные картинки лучше jpg или png ?-->
-            <img src="images/products-top/first.png" alt="" class="products-card__img">
+
             <!-- Я правильно сделал спрайты?-->
             <svg style="display: none;">
               <symbol id="search" viewBox="0 0 15.28 15.281">
@@ -174,28 +174,33 @@
                   transform="translate(-861 -1564)" />
               </symbol>
             </svg>
-            <div class="products-card__links">
-              <a href="#" class="products-card__link">
-                <svg class="search-icon">
-                  <use xlink:href="#search">
-                  </use>
-                </svg>
-              </a>
-              <a href="#" class="products-card__link">
-                <svg class="basket-icon">
-                  <use xlink:href="#basket">
-                  </use>
-                </svg>
-              </a>
-              <a href="#" class="products-card__link">
-                <svg class="like-icon">
-                  <use xlink:href="#like">
-                  </use>
-                </svg>
-              </a>
+            <div class="products-card__img-box">
+              <img src="images/products-top/first.png" alt="" class="products-card__img">
+              <div class="products-card__links">
+                <a href="#" class="products-card__link">
+                  <svg class="search-icon">
+                    <use xlink:href="#search">
+                    </use>
+                  </svg>
+                </a>
+                <a href="#" class="products-card__link">
+                  <svg class="basket-icon">
+                    <use xlink:href="#basket">
+                    </use>
+                  </svg>
+                </a>
+                <a href="#" class="products-card__link">
+                  <svg class="like-icon">
+                    <use xlink:href="#like">
+                    </use>
+                  </svg>
+                </a>
+              </div>
             </div>
-            <span class="products-card__title">Wooden radio</span>
-            <p class="products-card__subtitle">$29.00</p>
+            <div class="product-card_desc">
+              <span class="products-card__title">Wooden radio</span>
+              <p class="products-card__subtitle">$29.00</p>
+            </div>
           </article>
           <div class="products-card mix category-a">
             <div class="products-card__img-box">
@@ -221,151 +226,169 @@
                 </a>
               </div>
             </div>
-            <span class="products-card__title">Wooden chair</span>
-            <p class="products-card__subtitle">$29.00</p>
-
+            <div class="product-card_desc">
+              <span class="products-card__title">Wooden chair</span>
+              <p class="products-card__subtitle">$29.00</p>
+            </div>
           </div>
           <div class="products-card mix category-d">
-            <img src="images/products-top/third.png" alt="" class="products-card__img">
-            <div class="products-card__links">
-              <a href="#" class="products-card__link">
-                <svg class="search-icon">
-                  <use xlink:href="#search">
-                  </use>
-                </svg>
-              </a>
-              <a href="#" class="products-card__link">
-                <svg class="basket-icon">
-                  <use xlink:href="#basket">
-                  </use>
-                </svg>
-              </a>
-              <a href="#" class="products-card__link">
-                <svg class="like-icon">
-                  <use xlink:href="#like">
-                  </use>
-                </svg>
-              </a>
+            <div class="products-card__img-box">
+              <img src="images/products-top/third.png" alt="" class="products-card__img">
+              <div class="products-card__links">
+                <a href="#" class="products-card__link">
+                  <svg class="search-icon">
+                    <use xlink:href="#search">
+                    </use>
+                  </svg>
+                </a>
+                <a href="#" class="products-card__link">
+                  <svg class="basket-icon">
+                    <use xlink:href="#basket">
+                    </use>
+                  </svg>
+                </a>
+                <a href="#" class="products-card__link">
+                  <svg class="like-icon">
+                    <use xlink:href="#like">
+                    </use>
+                  </svg>
+                </a>
+              </div>
             </div>
             <span class="products__item-title">White chair</span>
             <p class="products-card__subtitle">$29.00</p>
           </div>
-          <div class="products-card mix category-b" style="background-image: url('images/products-top/fourth.png');">
-            <div class="products-card__links">
-              <a href="#" class="products-card__link">
-                <svg class="search-icon">
-                  <use xlink:href="#search">
-                  </use>
-                </svg>
-              </a>
-              <a href="#" class="products-card__link">
-                <svg class="basket-icon">
-                  <use xlink:href="#basket">
-                  </use>
-                </svg>
-              </a>
-              <a href="#" class="products-card__link">
-                <svg class="like-icon">
-                  <use xlink:href="#like">
-                  </use>
-                </svg>
-              </a>
+          <div class="products-card mix category-b">
+            <div class="products-card__img-box">
+              <img src="images/products-top/fourth.png" alt="" class="products-card__img">
+              <div class="products-card__links">
+                <a href="#" class="products-card__link">
+                  <svg class="search-icon">
+                    <use xlink:href="#search">
+                    </use>
+                  </svg>
+                </a>
+                <a href="#" class="products-card__link">
+                  <svg class="basket-icon">
+                    <use xlink:href="#basket">
+                    </use>
+                  </svg>
+                </a>
+                <a href="#" class="products-card__link">
+                  <svg class="like-icon">
+                    <use xlink:href="#like">
+                    </use>
+                  </svg>
+                </a>
+              </div>
             </div>
             <div class="products__item-title">Retro table</div>
             <p class="products__item-subtitle">$29.00</p>
           </div>
-          <div class="products-card mix category-b" style="background-image: url('images/products-top/fifth.png');">
-            <div class="products-card__links">
-              <a href="#" class="products-card__link">
-                <svg class="search-icon">
-                  <use xlink:href="#search">
-                  </use>
-                </svg>
-              </a>
-              <a href="#" class="products-card__link">
-                <svg class="basket-icon">
-                  <use xlink:href="#basket">
-                  </use>
-                </svg>
-              </a>
-              <a href="#" class="products-card__link">
-                <svg class="like-icon">
-                  <use xlink:href="#like">
-                  </use>
-                </svg>
-              </a>
+          <div class="products-card mix category-b">
+            <div class="products-card__img-box">
+              <img src="images/products-top/fifth.png" alt="" class="products-card__img">
+              <div class="products-card__links">
+                <a href="#" class="products-card__link">
+                  <svg class="search-icon">
+                    <use xlink:href="#search">
+                    </use>
+                  </svg>
+                </a>
+                <a href="#" class="products-card__link">
+                  <svg class="basket-icon">
+                    <use xlink:href="#basket">
+                    </use>
+                  </svg>
+                </a>
+                <a href="#" class="products-card__link">
+                  <svg class="like-icon">
+                    <use xlink:href="#like">
+                    </use>
+                  </svg>
+                </a>
+              </div>
             </div>
             <div class="products__item-title">Wooden radio</div>
             <p class="products__item-subtitle">$29.00</p>
           </div>
-          <div class="products-card mix category-c" style="background-image: url('images/products-top/sixth.png');">
-            <div class="products-card__links">
-              <a href="#" class="products-card__link">
-                <svg class="search-icon">
-                  <use xlink:href="#search">
-                  </use>
-                </svg>
-              </a>
-              <a href="#" class="products-card__link">
-                <svg class="basket-icon">
-                  <use xlink:href="#basket">
-                  </use>
-                </svg>
-              </a>
-              <a href="#" class="products-card__link">
-                <svg class="like-icon">
-                  <use xlink:href="#like">
-                  </use>
-                </svg>
-              </a>
+          <div class="products-card mix category-c">
+            <div class="products-card__img-box">
+              <img src="images/products-top/sixth.png" alt="" class="products-card__img">
+              <div class="products-card__links">
+                <a href="#" class="products-card__link">
+                  <svg class="search-icon">
+                    <use xlink:href="#search">
+                    </use>
+                  </svg>
+                </a>
+                <a href="#" class="products-card__link">
+                  <svg class="basket-icon">
+                    <use xlink:href="#basket">
+                    </use>
+                  </svg>
+                </a>
+                <a href="#" class="products-card__link">
+                  <svg class="like-icon">
+                    <use xlink:href="#like">
+                    </use>
+                  </svg>
+                </a>
+              </div>
             </div>
             <div class="products__item-title">Wooden chair</div>
             <p class="products__item-subtitle">$29.00</p>
           </div>
-          <div class="products-card mix category-c" style="background-image: url('images/products-top/seventh.png');">
-            <div class="products-card__links">
-              <a href="#" class="products-card__link">
-                <svg class="search-icon">
-                  <use xlink:href="#search">
-                  </use>
-                </svg>
-              </a>
-              <a href="#" class="products-card__link">
-                <svg class="basket-icon">
-                  <use xlink:href="#basket">
-                  </use>
-                </svg>
-              </a>
-              <a href="#" class="products-card__link">
-                <svg class="like-icon">
-                  <use xlink:href="#like">
-                  </use>
-                </svg>
-              </a>
+          <div class="products-card mix category-c">
+            <div class="products-card__img-box">
+              <img src="images/products-top/seventh.png" alt="" class="products-card__img">
+              <div class="products-card__links">
+                <a href="#" class="products-card__link">
+                  <svg class="search-icon">
+                    <use xlink:href="#search">
+                    </use>
+                  </svg>
+                </a>
+                <a href="#" class="products-card__link">
+                  <svg class="basket-icon">
+                    <use xlink:href="#basket">
+                    </use>
+                  </svg>
+                </a>
+                <a href="#" class="products-card__link">
+                  <svg class="like-icon">
+                    <use xlink:href="#like">
+                    </use>
+                  </svg>
+                </a>
+              </div>
             </div>
             <div class="products__item-title">White chair</div>
             <p class="products__item-subtitle">$29.00</p>
           </div>
-          <div class="products-card mix category-d" style="background-image: url('images/products-top/eighth.png');">
-            <div class="products-card__links">
-              <a href="#" class="products-card__link">
-                <svg class="search-icon">
-                  <use xlink:href="#search">
-                  </use>
-                </svg>
-              </a>
-              <a href="#" class="products-card__link">
-                <svg class="basket-icon">
-                  <use xlink:href="#basket">
-                  </use>
-                </svg>
-              </a>
-              <a href="#" class="products-card__link">
-                <svg class="like-icon">
-                  <use xlink:href="#like">
-                  </use>
-                </svg>
-              </a>
+          <div class="products-card mix category-d">
+            <div class="products-card__img-box">
+              <img src="images/products-top/eighth.png" alt="" class="products-card__img">
+              <div class="products-card__links">
+                <a href="#" class="products-card__link">
+                  <svg class="search-icon">
+                    <use xlink:href="#search">
+                    </use>
+                  </svg>
+                </a>
+                <a href="#" class="products-card__link">
+                  <svg class="basket-icon">
+                    <use xlink:href="#basket">
+                    </use>
+                  </svg>
+                </a>
+                <a href="#" class="products-card__link">
+                  <svg class="like-icon">
+                    <use xlink:href="#like">
+                    </use>
+                  </svg>
+                </a>
+              </div>
             </div>
             <div class="products__item-title">Retro table</div>
             <p class="products__item-subtitle">$29.00</p>

@@ -261,10 +261,18 @@
   justify-content: flex-end;
   align-items: center;
   padding-bottom: 41px;
-  
+  overflow: hidden;
   box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+  &__img-box{
+    object-fit: cover;
+  }
   &__links{
+    display: flex;
+    position: absolute;
     transform: translateY(300%);
+    right: 0;
+    left: 0;
+    justify-content: center;
   }
   
   // как сделать трансишион на появление этих трех линков? везде попробовал -не работает
@@ -313,6 +321,7 @@
 
   &__subtitle {
     color: #a3bbc8;
+    text-align:center;
   }
 }
 
