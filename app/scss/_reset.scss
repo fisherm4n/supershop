@@ -8,8 +8,8 @@ html {
   box-sizing: inherit;
 }
 
-ul[class],
-ol[class] {
+ul,
+ol {
 
   padding: 0;
 }
@@ -33,7 +33,7 @@ dd {
   margin: 0;
 }
 
-ul[class] {
+ul {
   list-style: none;
   padding: 0px;
 }
@@ -54,5 +54,5 @@ textarea,
 select {
   font: inherit;
   outline: transparent;
-  
+
 }
