@@ -6,5 +6,5 @@ $(function (){
     fade:true
   });
   
-   var mixer = mixitup('.products__cards');
+   var mixer = mixitup('.products-cards');
 });
