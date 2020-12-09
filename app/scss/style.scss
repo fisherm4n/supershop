@@ -244,9 +244,9 @@
 
 .products-cards {
   display: grid;
-  min-height: 800px;
+
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 380px);
   grid-gap: 30px;
 }
 
@@ -382,6 +382,54 @@
   }
 }
 
+.new-design {
+  padding-top: 89px;
+  padding-bottom: 120px;
+
+  &__cards {
+    grid-template-columns: repeat(3, 371px);
+    grid-template-rows: repeat(2, 250px);
+  }
+
+  &__card {
+    flex-direction: row-reverse;
+    max-width: 380px;
+    width: 100%;
+    background-color: rgb(248, 248, 248);
+    justify-content: space-between;
+    padding-top: 17px;
+    padding-left: 32px;
+  }
+
+  &__desc {
+    position: absolute;
+    max-width: 188px;
+    top: 36px;
+    left: 36px;
+    line-height: 1.3;
+  }
+
+  &__title {
+    @extend %DMSans-700;
+    font-size: 20px;
+    padding-bottom: 15px;
+    display: block;
+  }
+
+  // в приципе класс необязательно добавлять новый можно и вложенностью новые свойства задавать,да типа просто указать здесь .products-card__subtitle?
+  .products-card__subtitle {
+    text-align: start;
+  }
+
+  img {
+    max-width: none;
+  }
+
+  &__img-box {
+    margin-bottom: 0px;
+  }
+}
+
 .video {
   display: flex;
   min-height: 500px;
@@ -390,6 +438,119 @@
   background-repeat: no-repeat;
   align-items: center;
   justify-content: center;
+}
+
+.articles {
+  padding-top: 102px;
+
+  &__top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 41px;
+  }
+
+  &__title {
+    margin: 0px;
+  }
+
+  &__link {
+
+    @extend %DMSans-700;
+    color: #262626;
+    transform: color 0.3s;
+    svg {
+      transition: transform 0.3s;
+    }
+
+    &:hover {
+      color: $hover;
+      svg {
+        transform: translateX(60%);
+        
+        path{
+          fill:$hover;
+        }
+      }
+    }
+
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  &__card {
+    position: relative;
+    max-width: 370px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    z-index: 99;
+  }
+
+  &__card-link {
+    display: block;
+    position: absolute;
+    bottom: 164px;
+    left: 27px;
+    text-transform: uppercase;
+    max-width: 104px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #a3bbc8;
+    text-align: center;
+    color: #fff;
+
+  }
+
+  &__text {
+    font-size: 18px;
+    @extend %DMSans-500;
+    max-width: 274px;
+    color: #262626;
+    margin: 26px 32px 18px;
+    line-height: 1.3;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0px 27px;
+  }
+
+  &__bottom {
+    color: #222933;
+    @extend %Rubik-400;
+    margin: auto 0px 0px 32px;
+    border-top: 1px solid;
+    max-width: 84%;
+    padding: 14px 0px 28px;
+    font-size: 12px;
+  }
+
+  &__by {
+    margin-left: 42px;
+  }
+}
+
+.logos {
+  min-height: 440px;
+  background-color: #fef7f0;
+  margin-top: -178px;
+  z-index: -8;
+  display: flex;
+  align-items: center;
+
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 178px;
+  }
 }
 
 .footer {
@@ -407,6 +568,7 @@
 
   &__inner {
     padding-top: 18px;
+    line-height: 2;
   }
 
   &__contacts {
@@ -420,11 +582,13 @@
     margin-bottom: 21px;
   }
 
-  &__span {
+  &__text {
     text-transform: uppercase;
   }
 
-
+  &__list {
+    line-height: 2;
+  }
 
   &__item-link {
     color: $accent2;
@@ -483,6 +647,12 @@
     color: #fff;
     background-color: #a3bbc8;
     outline: transparent;
+    cursor: pointer;
+    margin-left: -3px;
+
+    &:hover {
+      background-color: $accent;
+    }
   }
 }
 
@@ -503,49 +673,12 @@
     padding-left: 12px;
     border-left: 1px solid #dae4e9;
   }
-}
 
-.new-design {
-  &__cards {
-    grid-template-columns: repeat(3, 371px);
-    grid-template-rows: repeat(2, 250px);
-  }
+  &__menu-item {
+    transition: color 0.3s;
 
-  &__card {
-    flex-direction: row-reverse;
-    max-width: 380px;
-    width: 100%;
-    background-color: rgb(248, 248, 248);
-    justify-content: space-between;
-    padding-top: 17px;
-    padding-left: 32px;
-  }
-
-  &__desc {
-    position: absolute;
-    max-width: 188px;
-    top: 36px;
-    left: 36px;
-    line-height: 1.3;
-  }
-
-  &__title {
-    @extend %DMSans-700;
-    font-size: 20px;
-    padding-bottom: 15px;
-    display: block;
-  }
-
-  // в приципе класс необязательно добавлять новый можно и вложенностью новые свойства задавать,да типа просто указать здесь .products-card__subtitle?
-  .products-card__subtitle {
-    text-align: start;
-  }
-
-  img {
-    max-width: none;
-  }
-
-  &__img-box {
-    margin-bottom: 0px;
+    &:hover {
+      color: #fcd7b6;
+    }
   }
 }
