@@ -1,0 +1,15 @@
+.new-acc{
+  margin: 0 auto;
+  max-width: 470px;
+  text-align: center;
+  &__help{
+    text-align: center;
+    margin-bottom: 26px;
+  }
+  &__link{
+    display: block;
+    padding: 20px 0px;
+    width: 100%;
+    border: 2px solid #a3bbc8;
+  }
+}

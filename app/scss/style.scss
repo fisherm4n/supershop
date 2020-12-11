@@ -3,7 +3,7 @@
 @import "reset";
 @import "libs";
 @import "global";
-
+@import "login";
 .header {
   &__inner {
     display: flex;
@@ -554,6 +554,7 @@
 }
 
 .footer {
+  padding-top: 80px;
   @extend %Rubik-400;
   font-size: 14px;
 }
