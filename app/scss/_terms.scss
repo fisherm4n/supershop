@@ -1,0 +1,33 @@
+.terms {
+  padding-top: 120px;
+  &__list {
+    list-style: decimal-leading-zero;
+    padding-left: 30px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 70px;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    color: $title;
+    margin-bottom: 20px;
+    font-weight: 500;
+
+    &:first-child {
+      margin-bottom: 30px; //почему first-child работает не корректно? нижний отсутуп действует на все заголовки..?
+    }
+  }
+
+  &__text {
+    @extend %Rubik-400;
+    color: $title;
+  }
+
+  li:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}

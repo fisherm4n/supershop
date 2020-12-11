@@ -4,6 +4,7 @@
 @import "libs";
 @import "global";
 @import "login";
+@import "terms";
 .header {
   &__inner {
     display: flex;
@@ -530,10 +531,29 @@
     max-width: 84%;
     padding: 14px 0px 28px;
     font-size: 12px;
+    
   }
-
+  &__date{
+    position: relative;
+    margin-left: 23px;
+    &::before {
+      position: absolute;
+      content: url('../images/calendar.svg');
+      height: 13px;
+      width: 12px;
+      left: -20px;
+    }
+  }
   &__by {
+    position: relative;
     margin-left: 42px;
+    &::before{
+      position: absolute;
+      content: url('../images/User.svg');
+      height: 13px;
+      width: 12px;
+      left: -15px;
+    }
   }
 }
 
