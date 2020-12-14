@@ -5,6 +5,7 @@
 @import "global";
 @import "login";
 @import "terms";
+
 .header {
   &__inner {
     display: flex;
@@ -206,7 +207,6 @@
     }
 
     &--left::before {
-      //почему картинки посветлели?
       content: url("../images/benefits/support.svg");
     }
 
@@ -460,17 +460,19 @@
     @extend %DMSans-700;
     color: #262626;
     transform: color 0.3s;
+
     svg {
       transition: transform 0.3s;
     }
 
     &:hover {
       color: $hover;
+
       svg {
         transform: translateX(60%);
-        
-        path{
-          fill:$hover;
+
+        path {
+          fill: $hover;
         }
       }
     }
@@ -531,11 +533,13 @@
     max-width: 84%;
     padding: 14px 0px 28px;
     font-size: 12px;
-    
+
   }
-  &__date{
+
+  &__date {
     position: relative;
     margin-left: 23px;
+
     &::before {
       position: absolute;
       content: url('../images/calendar.svg');
@@ -544,10 +548,12 @@
       left: -20px;
     }
   }
+
   &__by {
     position: relative;
     margin-left: 42px;
-    &::before{
+
+    &::before {
       position: absolute;
       content: url('../images/User.svg');
       height: 13px;
@@ -702,4 +708,176 @@
       color: #fcd7b6;
     }
   }
+}
+
+.about {
+  padding-top: 115px;
+  &__container {
+    display: flex;
+  }
+
+  &__wrapper {
+    padding: 19px 0px 88px 28px;
+  }
+
+  &__inner {
+    margin-bottom: 62px;
+  }
+
+  &__top-box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__num {
+    font-size: 140px;
+    font-weight: bold;
+    color: $default2;
+  }
+
+  &__exp {
+    margin-left: 30px;
+    font-weight: normal;
+    color: #243f4d;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__title {
+    color: $title;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 32px;
+    border-top: 2px solid #ebeef3;
+
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+
+    &::before {
+      position: absolute;
+      left: -60px;
+      top: 20px;
+    }
+
+
+    &--left::before {
+      content: url('../images/about/top-icon.svg');
+    }
+
+    &--mid::before {
+      content: url('../images/about/top-icon2.svg');
+
+    }
+
+    &--right::before {
+      content: url('../images/about/top-icon3.svg');
+    }
+  }
+
+  &__item-num {
+    @extend %DMSans-700;
+    font-size: 36px;
+    color: $title;
+    line-height: 1.3;
+  }
+
+  &__item-text {
+    @extend %DMSans-700;
+    color: #4c4c4c;
+  }
+}
+.about-benefits{
+  padding: 80px 0px;
+  background-color: #fcd7b6;
+  &__list{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+  &__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $title;
+    &--1::before{
+      content: url('../images/about/benef1.svg');
+    }
+    &--2::before{
+      content: url('../images/about/benef2.svg');
+    }
+    &--3::before{
+      content: url('../images/about/benef3.svg');
+    }
+    &--4::before{
+      content: url('../images/about/benef4.svg');
+    }
+    
+  }
+  &__num{
+    @extend %DMSans-700;
+    font-size: 36px;
+  }
+  &__title{
+    font-size: 18px;
+  }
+}
+.team{
+  padding-top: 112px;
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title{
+    color: $title;
+    font-size: 36px;
+  }
+  &__cards{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 40px;
+
+  }
+  &__content-box{
+    max-width: 300px;
+  }
+  &__text{
+    margin-bottom: 36px;
+  }
+  &__content-link{
+    @extend .shop-link;
+    max-width: 165px;
+  }
+  &__link{
+    display: inline-block;
+    border-radius: 50%;
+    background-color: red;
+    width: 40px;
+    height: 40px;
+    &:not(:last-child){
+      margin-right: 6px;
+    }
+  }
+  &__card-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 324px;
+    padding: 22px 14px;
+    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+  }
+ 
+ 
+
 }

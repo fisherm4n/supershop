@@ -1,4 +1,5 @@
 $default:#191919;
+$default2:#a3bbc8;
 $accent:#436372;
 $title:#243f4d;
 $title2:#1f2044;
@@ -14,6 +15,10 @@ $hover:#fcd7b6;
   font-family:'Rubik-Medium';
   font-weight: 500;
 }
+%Rubik-700{
+  font-family:'Rubik-Bold';
+  font-weight: 700;
+}
 %DMSans-400 {
   font-family: 'DMSans-Regular';
   font-weight: 400;
@@ -26,6 +31,7 @@ $hover:#fcd7b6;
   font-family:'DMSans-Bold';
   font-weight: 700;
 }
+
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
 }
