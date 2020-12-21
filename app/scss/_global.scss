@@ -187,3 +187,37 @@ body {
   
   }
 }
+.pagination {
+  margin: 0 auto;
+
+  &__list {
+    display: flex;
+    width: 100%;
+  }
+
+  &__item {
+    border: 1px solid $default2;
+    min-width: 50px;
+    height: 50px;
+    color: $title;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:first-child,
+    &:hover {
+      background-color: $default2;
+      color: #fff;
+    }
+
+    &:last-child {
+      min-width: 74px;
+      width: 100%;
+    }
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+}

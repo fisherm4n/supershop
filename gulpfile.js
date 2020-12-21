@@ -1,3 +1,4 @@
+var gulp = require('gulp');
 const { src, dest, watch, parallel, series } = require('gulp');
 const scss = require('gulp-sass');
 const concat = require('gulp-concat');
@@ -5,19 +6,10 @@ const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify'); 
 const imagemin = require('gulp-imagemin'); 
 const del = require('del'); 
+const GulpClient = require('gulp');
 const browserSync = require('browser-sync').create();
-const svgSprite = require('gulp-svg-sprite');
-const svgSprites = () =>{
-  return src('./src/img/**.svg')
-  .pipe(svgSprite({
-    mode:{
-      stack:{
-        sprite:"../sprite.svg"
-      }
-    }
-  }))
-  .pipe(dest('./app/img'))
-}
+// const svgSprite = require('gulp-svg-sprite');
+
 
 
 function browsersync() {
@@ -50,6 +42,8 @@ function scripts() {
     'node_modules/jquery/dist/jquery.js',
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+    'node_modules/rateyo/src/jquery.rateyo.js',
+    'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
     'node_modules/mixitup/dist/mixitup.js',
     'app/js/main.js'
   ])
@@ -75,6 +69,11 @@ function images() {
   .pipe(dest('dist/images'))
 }
 
+
+
+
+
+
 function build() {
   return src([
     'app/**/*.html',
@@ -90,11 +89,24 @@ function cleanDist() {
 
 function watching() {
   watch(['app/scss/**/*.scss'], styles);
-  watch(['./src/img/**.svg'], svgSprites);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
+  
 }
 
+// gulp.task('svgSprite', function () {
+//   return gulp.src( '../iconsprite/*.svg')
+//   .pipe(svgSprite({
+//     mode:{
+//       stack:{
+//         sprite:"../icons/sprite.svg",
+//         example:true
+//       }
+//     },
+//   }
+//   ))
+//   .pipe(dest(path.build.img))
+// })
 exports.styles = styles;
 exports.scripts = scripts;
 exports.browsersync = browsersync;
@@ -104,4 +116,5 @@ exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
 
 
-exports.default = parallel(styles, scripts, browsersync, watching);
+
+exports.default = parallel(styles, scripts, browsersync,svgSprite, watching);
