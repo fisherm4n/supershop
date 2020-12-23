@@ -4,10 +4,10 @@ $(function (){
     $(this).addClass('shop-content__filter-btn--active');
   });
   $('.button-grid').on('click', function(){
-    $('.product-item').removeClass('product-item--list');
+    $('.products-card').removeClass('products-card--list');
   });
   $('.button-list').on('click', function(){
-    $('.product-item').addClass('product-item--list');
+    $('.products-card').addClass('products-card--list');
   });
   $('.filter-price__input').ionRangeSlider({
     type:"double",

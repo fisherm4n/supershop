@@ -188,11 +188,12 @@ body {
   }
 }
 .pagination {
-  margin: 0 auto;
+
 
   &__list {
     display: flex;
     width: 100%;
+    justify-content: center;
   }
 
   &__item {
@@ -213,7 +214,7 @@ body {
 
     &:last-child {
       min-width: 74px;
-      width: 100%;
+   
     }
 
     &:not(:last-child) {
