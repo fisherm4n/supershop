@@ -1210,3 +1210,18 @@
     }
   }
 }
+.product-page{
+  .product-info{
+    display: flex;
+    &__slide{
+      width: 550px;
+    }
+  }
+}
+.product-slide{
+  &__thumb{
+    width: 138px;
+    margin-right: 25px;
+  }
+
+}
