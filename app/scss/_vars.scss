@@ -31,7 +31,16 @@ $hover:#fcd7b6;
   font-family:'DMSans-Bold';
   font-weight: 700;
 }
-
+%btn{
+  background-color: $default2;
+  border: none;
+  height: 53px;
+  width: 207px;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #fff;
+  margin-left: 14px;
+}
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
 }

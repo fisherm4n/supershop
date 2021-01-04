@@ -255,7 +255,7 @@
   padding-bottom: 41px;
   overflow: hidden;
   box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-  max-width: 270px;
+  width: 270px;
 
   &__img-box {
     margin-bottom: 57px;
@@ -321,6 +321,7 @@
     display: inherit;
     color: #a3bbc8;
     text-align: center;
+    margin-top: 8px;
   }
 }
 
@@ -601,10 +602,7 @@
     text-transform: uppercase;
   }
 
-  &__list {
-    line-height: 2;
-  }
-
+ 
   &__item-link {
     color: $accent2;
     transition: color 0.3s;
@@ -617,8 +615,9 @@
   }
 
   &__column {
-    //дизайнер криворукий? поэтому пришлось костыльно падинги юзать?
-    padding-right: 88px;
+
+    padding-right: 54px;
+    
   }
 
   &__column--fixed {
@@ -628,7 +627,7 @@
 
   &__title {
     font-size: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     text-transform: uppercase;
     color: $title2;
     padding-top: 11px;
@@ -638,13 +637,19 @@
   &__form {
     @extend %DMSans-400;
   }
-
+  &__item{
+    line-height: 1.3;
+        max-width: 120px;
+    &+&{
+      margin-top: 8px;
+    }
+  }
   &__input {
     background-color: #fef7f0;
     @extend %DMSans-400;
     max-width: 159px;
     border: none;
-    padding: 5px 15px;
+    padding: 10px 15px;
     outline: transparent;
 
     &::placeholder {
@@ -658,7 +663,7 @@
     border: none;
     max-width: 106px;
     width: 100%;
-    padding: 6px 26px 6px 20px;
+    padding: 10px 26px 10px 20px;
     color: #fff;
     background-color: #a3bbc8;
     outline: transparent;
@@ -734,6 +739,7 @@
 
   &__title {
     color: $title;
+    margin-bottom: 10px;
   }
 
   &__list {
@@ -836,6 +842,7 @@
   &__title {
     color: $title;
     font-size: 36px;
+    margin-bottom: 15px;
   }
 
   &__cards {
@@ -850,7 +857,7 @@
   }
 
   &__text {
-    margin-bottom: 36px;
+    margin-bottom: 52px;
   }
 
   &__card-name {
@@ -1192,7 +1199,7 @@
 
     .products-card__btn {
       display: inline-block;
-      padding: 12px 48px;
+      padding: 20px 48px;
       color: $default2;
       background-color: #fff;
       box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
@@ -1227,7 +1234,13 @@
 }
 
 .product-page {
-  padding: 120px 0px;
+  padding-top: 120px;
+  .title {
+    font-size: 40px;
+    color: #333333;
+    text-align: start;
+
+  }
 
   .product-info {
     display: flex;
@@ -1245,16 +1258,11 @@
       font-size: 30px;
       @extend %Rubik-400;
       color: #333333;
-      margin-bottom: 32px;
+     margin-bottom: 22px;
+     display: block;
     }
 
-    .title {
-      font-size: 40px;
-      color: #333333;
-      text-align: start;
-      margin-bottom: 24px;
-
-    }
+    
 
     .shop-content__stars {
       padding-left: 0px;
@@ -1318,7 +1326,7 @@
 
     .jq-number__field input {
       width: 100%;
-      padding: 12px 11px;
+      padding: 15px 11px;
       border: none;
       outline: none;
       background: none;
@@ -1359,6 +1367,56 @@
       color: $title;
     }
   }
+  &__bottom-title{
+display: inline-block;    font-size: 36px;
+  }
+  .product-page__slider {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px 0px;
+    .products-card{
+      width: 270px !important;
+      display: flex !important;
+      height: 380px;
+    }
+    .slick-arrow{
+      border: 2px solid #edf1f4;
+      border-radius: 10px;
+      font-size: 0px;
+      height: 50px;
+      width: 50px;
+      background-color: #fff;
+    }
+    .slick-list{
+      padding: 52px 0px;
+    }
+    .slick-dots{
+      display: none !important;
+    }
+    .slick-prev{
+      position: absolute;
+      top: -63px;
+      right: 90px;
+      background-image: url('../images/product-page/arrow-l.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .slick-next{
+      position: absolute;
+      top: -63px;
+      right: 25px;
+      background-image: url('../images/product-page/arrow-r.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    
+    .slick-prev:hover,
+    .slick-next:hover
+      {
+      border-color: $default2;
+      cursor: pointer;
+    }
+  }
 }
 
 .product-slide {
@@ -1391,5 +1449,42 @@
       height: 532px;
       object-fit: cover;
     }
+  }
+}
+.product-tabs{
+  padding-top: 80px;
+  &__top{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+  &__top-item{
+    margin-right: 13px;
+    max-width: 238px;
+    width: 100%;
+    background-color: #edf1f4;
+     padding: 13px 0px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 8px;
+    color: $title;
+  }
+  &__top-item--active{
+    background-color: $default2;
+    color: #fff;
+  }
+  &__content{
+    @extend %Rubik-400;
+  }
+  &__content-item{
+    display: none ;
+    margin-bottom: 115px;
+    &.product-tabs__content-item--active{
+      display: block;
+    }
+  }
+  &__content-text{
+    @extend %Rubik-400;
+    color: $title;
   }
 }

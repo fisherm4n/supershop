@@ -1,4 +1,46 @@
 $(function (){
+  $('.product-page__slider').slick({
+  dots: true,
+  infinite: false,
+  speed: 800,
+  slidesToShow: 4,
+  slidesToScroll: 2,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+  $('.product-tabs__top-item').on('click',function(e){
+  e.preventDefault();
+  $('.product-tabs__top-item').removeClass('product-tabs__top-item--active');
+  $(this).addClass('product-tabs__top-item--active');
+  $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
+   $($(this).attr("href")).addClass('product-tabs__content-item--active');
+  });
   $('.product-slide__thumb').slick({
     asNavFor:'.product-slide__big',
     focusOnSelect:true,
